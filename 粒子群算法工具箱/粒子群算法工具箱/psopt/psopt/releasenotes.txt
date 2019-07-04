@@ -1,0 +1,57 @@
+Development Notes for psopt toolbox
+
+ver 20091119
+* Generalized the algorithm so that it can be called from independent functions.
+* Should be able to work with problems with any number of dimensions.
+* Convergence criterion should be some tolerance level.
+* Syntax matches that of GA Toolbox.
+* Plotting functions are separate from main function, using GA Toolbox as a model for organization.
+
+ver 20091130
+* Implemented bound checking. Start with initial population distribution (right after options parsing) then run a checking function for the actual swarming process.
+
+ver 20091202
+* Bug fix: calling pso using a problem structure should now work properly.
+* Closing the plot window in the middle of the simulation will now end the optimization run, returning the current best position and the appropriate exitflag value.
+* Ability to call options.OutputFcn -- not yet tested.
+* Known minimum, if provided (for plotting only, not aiding algorithm in any way), will now show a flag marking its location on the 3d surface plot.
+
+ver 20091205
+* Major bug fix: particles should now comply with linear constraints.
+* Bug fix: Known-minimum flag on the demo surface plot no longer defaults to (1,1) if no known minimum is provided.
+* Bug fix: regexpr now written properly to check if the test function chosen during psodemo is actually an m-file.
+* More test functions included; some have been vectorized for faster demos.
+* Added a plotting function which shows the score histogram for the current generation. NOTE: psoplotscores has been reassigned to plot histograms. psoplotrange is now the function which plots the best and mean scores over all iterations.
+* Added template for writing custom test functions. NOTE: the algorithm can and should be run without the demonstration features for real problems, by calling pso with the appropriate input arguments. This significantly reduces computational overhead.
+* Add option to call hybrid function after swarming is complete.
+
+ver 20091205b
+* Fixed bug involving nonlcon being undefined.
+* Minor visual improvements.
+* Moved surface overlaying code (for demonstration) from main function over to psoplotswarmsurf.
+
+ver 20091210:
+* Bug fix: output functions should work now.
+* Bug fix: checkbounds should now work even if LB and UB are empty.
+* Renamed plotting functions: PSOPLOTBESTF now plots the best and mean scores. PSOPLOTSCOREDIVERSITY now plots the score histogram.
+* Implemented 'absorb' style of constraint boundary for problems with linear constraints. Should improve performance for problems with linear equality constraints.
+* Social and cognitive attraction parameters can now be adjusted through the options structure.
+
+Next Version:
+* Nonlinear inequality constraints can now be used, with 'soft' boundaries only. Nonlinear equality constraints will be ignored for now, due to poor performance of 'soft' boundary checking.
+* Demo now has a 'fast' setting requiring less intensive 3d graphics.
+* The code which updates the swarm attraction parameters for each iteration has been separated from the main function.
+
+To do before next release:
+* Ability to define maximum particle velocities vmax.
+* Clerc's method: constriction factor chi to prevent explosive divergence of swarm.
+
+Future:
+* New convergence criterion: isothermal equilibrium (Mikki 2008, Chapter 3).
+* Ability to define neighborhoods of particles to determine non-local best positions (social parameter).
+  - Social stereotyping using clustering algorithm (Kennedy 2000)
+  - Von Neumann topology (Kennedy 2002)
+* Swarm coherence and collision-avoidance parameters?
+* Detect and eliminate dependent (i.e. redundant) linear constraints.
+* Ability to use non-linear equality constraints.
+* Implement multiobjective optimization option; find Pareto front.

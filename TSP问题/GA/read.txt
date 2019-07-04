@@ -1,0 +1,7 @@
+city_coordinate.mat存放地址数据
+y18.m：n城市数量必改
+       种群大小，迭代次数可改
+       经纬度坐标用distancematrix函数，直角坐标改回原dmat
+tsp_ga.m：xy需改
+          dmat根据坐标情况
+          种群大小，迭代次数与前一致

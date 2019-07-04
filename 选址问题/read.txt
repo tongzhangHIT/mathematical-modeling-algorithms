@@ -1,0 +1,3 @@
+main.m与fitness.m中city_coordinate（坐标），carge（货物）需改
+main中部分参数可调
+若选址太多，要修改draw.m中数字

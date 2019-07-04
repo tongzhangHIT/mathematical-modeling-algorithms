@@ -1,0 +1,9 @@
+peak.m修改目标函数（20）
+circularConstraint:非线性约束条件，小于等于
+gaPeaksExample:lb(20):下限
+               ub(21):上限
+               A，b(34,35):线性不等式约束
+               Aeq,beq(36,37):线性等式约束
+               gaoptimset:设置相关属性参数，具体可查书
+                      PopInitRange改为取值范围，其余两个不变
+                      可增加

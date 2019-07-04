@@ -1,0 +1,61 @@
+plot
+ezplot
+plot3
+ezplot3
+loglog指数绘图
+semilogx
+semilogy
+contour等高线
+ezcontourf
+polar极坐标
+ezpolar
+stem离散火柴杆图
+stairs阶梯图
+fill填充
+plotyy双y轴
+subplot分区
+image图像显示
+quiver矢量场图
+quiver3
+surfnorm二维z=f(x,y)矢量场
+ribbon带状图
+surf表面
+ezsurf
+mesh表面网格图
+ezmesh
+surfc表面图等高线图
+triplot三角填充
+
+
+
+scatter散点图
+scatter3
+errorbar箱型图
+bar条形图
+barh
+bar3
+hist直方图
+pie扇形图
+pie3
+area堆积面积图
+gplot矩阵结构图，图论
+rose玫瑰图
+
+
+
+设置
+颜色(Colr)：r g b c m y k /rgb格式
+线型(LineStyle)：- -- : -.
+点型：+ o * x s d v
+线宽(LineWidth)
+colorbar
+line:添加线条
+text：添加文字
+     'Color'  'FontSize'   'FontName'    'FontWeight'
+shading：shading faceted/shading flat/shading interp
+light   lighting flat/lighting phong
+colormap:jet hot cool spring summer autumn winter gray bone copper pink lines
+axes('Position',[left bottom width height])画中画
+
+
+

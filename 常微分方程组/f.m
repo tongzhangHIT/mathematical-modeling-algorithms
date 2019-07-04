@@ -1,0 +1,20 @@
+function dy=f(t,y)
+Sh0=0.482;%一些参数
+Sl0=0.589;
+D0=21;
+Bh=0.0000247;
+Bl=0.0001213;
+ah=0.034;
+al=0.112;
+gamh=0.027;
+gaml=0.086;
+rho=0.1;
+N1=1;
+N2=0.5;
+lamda=0.05;
+
+dy=zeros(3,1);%
+dy(1)=-Bh*y(3)*y(1)+ah-gamh;%常微分方程组
+dy(2)=-Bl*y(3)*y(2)+al-gaml;%dy(1),dy(2),dy(3)为三个变量的微分
+dy(3)=(Bl*y(2)+Bh*y(1))*y(3)*N1+(gamh+gaml)*rho*N2+lamda*y(3);
+dy=dy(:);
