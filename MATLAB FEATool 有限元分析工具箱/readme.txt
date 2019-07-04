@@ -1,8 +1,8 @@
-MATLAB FEATool 有限元分析工具箱
+MATLAB FEATool 鏈夐檺鍏冨垎鏋愬伐鍏风
 https://www.featool.com/
 Physics Simulation Made Easy
 Multiphysics Simulation Toolbox for MATLAB
 Fully Integrated and Easy to Use
 Define and Set Up Simulations in Minutes
 Programmable and Customizable
-OpenFOAM? and FEniCS Solver Integration
+OpenFOAM and FEniCS Solver Integration
